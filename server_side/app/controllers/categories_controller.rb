@@ -3,9 +3,9 @@ class CategoriesController < ApplicationController
 
   # GET /categories
   def index
-    @categories = Category.all
+    categories = Category.all
 
-    render json: @categories
+    render json: categories, include: [:expenses]
   end
 
   # GET /categories/1
@@ -46,6 +46,6 @@ class CategoriesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def category_params
-      params.fetch(:category, {})
+      params.require(:category).permit(:name)
     end
 end
