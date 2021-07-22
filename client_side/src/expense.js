@@ -28,7 +28,6 @@ class Expense{
             Due Date: <input type="text" id=due_date>
             <input type="submit" id="create">
             <input type="hidden" id="category_id" value="${ctg.id}">
-
         </form>
         `
         return this.element
@@ -40,7 +39,16 @@ class Expense{
     }
 
     addToDom(){
-        debugger
+        if (this === undefined ) {
+            false
+        } else {
+        document.getElementById(`category-${this.category_id}`).childNodes[1].innerHTML +=  `<h3>${this.amount}</h3>` + `<p>${this.due_date}</p>` + `<p>${this.name}</p>`
+        if (document.getElementById(`category-${this.category_id}`).childNodes[7] === undefined){
+            false
+        } else {
+            document.getElementById(`category-${this.category_id}`).childNodes[7].remove()
+        }
+        }
     }
 
 }

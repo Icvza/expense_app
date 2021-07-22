@@ -4,6 +4,17 @@ class ExpenseService{
         this.endpoint = endpoint
     }
 
+    getExpense(){
+        fetch(`${this.endpoint}/expenses`)
+        .then(resp => resp.json())
+        .then( expenses => {
+            for (const expense of expenses ) {
+                const x = new Expense (expense)
+                x.addToDom()
+            }
+        })
+    }
+
 
     createExpense() {
         const expense = {

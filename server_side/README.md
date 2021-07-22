@@ -1,24 +1,21 @@
-# README
+# Expense App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Track your expenses.
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+1. Clone this Repo 
+2. Both the frontend and the backend are located in the same repo therefore you will have to CD into the server_sider 
+    1. Run ``` rails:db migrate```
+    2. Open another terminal 
+    3. cd into client_side 
+    4.  ``` open index.html ```
 
-* System dependencies
 
-* Configuration
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-* Database creation
+Please make sure to update tests as appropriate.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
